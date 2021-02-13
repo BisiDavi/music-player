@@ -11,31 +11,26 @@ const useStyles = makeStyles({
     borderRadius: '7px',
     width: '54.04px',
     color: 'white',
+    border:'none',
+    padding:'4px 15px',
     height: '24px',
-    img: {
+    '& img': {
       margin: '2px 5px'
     }
   }
 });
 
 interface IButtonProps {
-  bg: string;
   text: string;
-  img: string;
 }
 
-const IconButton = ({ bg, text }: IButtonProps): JSX.Element => {
-  const classes = useStyles({ bg });
+const IconButton = ({ text }: IButtonProps): JSX.Element => {
+  const classes = useStyles();
   return (
-    <button  className={classes.iconbtn}>
-        <Image 
-          src="/profile.png" 
-          width={25} 
-          height={25} 
-          alt="profile"
-        />
-        {text}
-      </button>
+    <button className={classes.iconbtn}>
+      <Image src="/profile.png" width={25} height={25} alt="profile" />
+      {text}
+    </button>
   );
 };
 

@@ -2,14 +2,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   button: {
-    backgroundColor: props => props.bg,
     color: 'white',
-    borderRadius: '10px'
+    borderRadius: '7px',
+    width: '63.52px',
+    height: '23px',
+    backgroundColor: '#FF0D0D',
+    border:'none',
+    padding:'4px 15px'
   }
 });
 
 interface IButtonProps {
-  bg: string;
   text: string;
 }
 

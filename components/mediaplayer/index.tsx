@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import { Imagecard } from '../card';
 
 const useStyles = makeStyles({
   button: {
@@ -19,13 +20,17 @@ const Mediaplayer = (props: IButtonProps): JSX.Element => {
   return (
     <Grid container>
       <Grid xs={3} item>
-        <Imagecard imgsrc="/imageplaceholder11.png" />
+        <Imagecard imgsrc="/imageplaceholder1.png" />
       </Grid>
       <Grid xs={9} item>
         <p>Travel and adventure</p>
         <h3>Radio station</h3>
       </Grid>
-      <button className={classes.button}>{props.text}</button>
+      <Grid xs={12} item>
+        <Image src="/wave.png" />        
+      </Grid>      
+      <Grid xs={12} item>
+      </Grid>      
     </Grid>
   );
 };

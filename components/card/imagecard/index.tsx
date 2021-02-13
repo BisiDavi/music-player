@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Paper } from '@material-ui/core';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Button from '../../buttons';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   paper:{
@@ -14,7 +13,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Videocard = ({ imgsrc }) => {
+const Imagecard = ({ imgsrc }) => {
   const classes = useStyles();
   return (
     <Paper className={classes.paper}>
@@ -26,4 +25,4 @@ const Videocard = ({ imgsrc }) => {
   );
 };
 
-export default Videocard;
+export default Imagecard;

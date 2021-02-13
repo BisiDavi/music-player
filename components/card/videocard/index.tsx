@@ -1,39 +1,41 @@
 import Image from 'next/image';
 import { Paper } from '@material-ui/core';
-import { makeStyles} from '@material-ui/core/styles';
-import {Button,IconButton} from '../../../imports';
+import { makeStyles } from '@material-ui/core/styles';
+import { Button, IconButton } from '../../../imports';
 
 const useStyles = makeStyles({
-  paper:{
+  paper: {
     borderRadius: '10px',
     position: 'relative',
-
+    background: 'none'
   },
-  playIcon:{
+  playIcon: {
     left: '45%',
-    position:'absolute'
+    position: 'absolute'
   },
   btnGrp: {
     position: 'absolute',
     top: '30px',
     left: '40px',
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '130px'
   }
 });
 
 const Videocard = ({ video }) => {
   const classes = useStyles();
   return (
-    <Paper className={classes.paper}>
+    <div className={classes.paper}>
       <Image src={video} width={900} height={400} />
       <div className={classes.btnGrp}>
-        <Button text="Live" bg="red" />
+        <Button text="Live" />
         <IconButton text="8/10" />
       </div>
       <div className={classes.playIcon}>
         <Image src="/play.png" height={70} width={70} />
       </div>
-    </Paper>
+    </div>
   );
 };
 
