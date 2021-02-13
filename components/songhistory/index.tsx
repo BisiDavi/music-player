@@ -9,10 +9,22 @@ const useStyles = makeStyles({
     padding: '15px 40px 25px 40px',
     background: ' #292929',
     borderRadius: '15px',
-    display:'flex'
+    display: 'flex',
+    '& h3': {
+      color: 'white',
+      fontFamily: 'Poppins',
+      fontStyle: 'normal',
+      fontWeight: '500',
+      fontSize: '18px',
+      lineHeight: '116.5%'
+    }
   },
-  historyImg:{
-    margin: 10px 20px
+  imgGrp: {
+    marginLeft: '20px',
+    display: 'flex'
+  },
+  historyImg: {
+    margin: '10px'
   }
 });
 const Songhistory = () => {
@@ -26,15 +38,13 @@ const Songhistory = () => {
     <Grid className={classes.root}>
       <h3>
         Song <br /> History
-      </h3> 
-    <span>
-      {images.map(img => (
-        <div id={img.id} className={classes.historyImg}>
-          <Imagecard 
-            imgsrc={img.image}  
-          />
-        </div>
-      ))}
+      </h3>
+      <span className={classes.imgGrp}>
+        {images.map(img => (
+          <div key={img.id} className={classes.historyImg}>
+            <Imagecard imgsrc={img.image} height={70} width={70} play />
+          </div>
+        ))}
       </span>
     </Grid>
   );

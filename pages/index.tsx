@@ -9,8 +9,21 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       backgroundColor: 'black',
-      padding: theme.spacing(8),
+      padding: theme.spacing(4),
       height: '100%'
+    },
+    media: {
+      height: '400px',
+      padding:'0px 7px'
+    },
+    rightColumn: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between'
+    },
+    leftColumn: {
+      height: '380px',
+      width: '400px'
     },
     paper: {
       backgroundColor: 'black',
@@ -35,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& h3': {
         color: 'white',
         fontFamily: 'Poppins',
-        marginLeft:'10px'
+        marginLeft: '10px'
       },
       '& ::-webkit-scrollbar': {
         width: '6px',
@@ -79,18 +92,22 @@ const LandingPage = (): JSX.Element => {
               <Banner />
             </Grid>
             <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Videocard video="/videoplaceholder.png" />
-          </Paper>
+              <Paper className={classes.paper}>
+                <Videocard video="/videoplaceholder.png" />
+              </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Grid container className={classes.media} spacing={2}>
+                <Grid item className={classes.leftColumn} xs={6}>
+                  <Mediaplayer />
+                </Grid>
+                <Grid item className={classes.rightColumn} xs={6}>
+                  <Songhistory />
+                  <Volumemixer />
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
-<Grid item xs={6}>
-  <Mediaplayer />
-</Grid>
-<Grid item xs={6}>
-  <Songhistory />
-  <Volumemixer />
-</Grid>
-        </Grid>
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.playlist}>
@@ -100,7 +117,6 @@ const LandingPage = (): JSX.Element => {
             ))}
           </Paper>
         </Grid>
-
       </Grid>
     </div>
   );

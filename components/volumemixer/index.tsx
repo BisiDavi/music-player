@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { Paper, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Slider  from './volume';
+import VolumeSlider from './volume';
 import { Button } from '../../imports';
 
 const useStyles = makeStyles({
   paper: {
-    width: '500px',
+    width: '100%',
     height: '208px',
     background: '#FF8A00',
     borderRadius: '18px'
@@ -18,7 +18,15 @@ const useStyles = makeStyles({
   volume: {
     display: 'flex',
     color: 'white',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    flexDirection:'column', 
+    '& p':{
+      color: 'white'
+    }
+
+  },
+  group:{
+    display:'flex'
   }
 });
 
@@ -29,22 +37,26 @@ const Volumemixer = () => {
       <Grid container>
         <Grid item xs={12} className={classes.volume}>
           <p>Volume mixer</p>
-          <Slider />
+          <VolumeSlider />
         </Grid>
 
-        <Grid item xs={6} className={classes.playIcon}>
-          <p>Quality sounds</p>
-          <div className={classes.group}>
-            <Image src="/play.png" height={70} width={70} />
-            <Button text="64KBPS" />
-          </div>
-        </Grid>
-        <Grid item xs={6} className={classes.playIcon}>
-          <p>Playlist song</p>
-          <div className={classes.group}>
-          <Image src="/play.png" height={70} width={70} />
-          <Button text="Download" />
-          </div>
+        <Grid item>
+          <Grid container>
+            <Grid item xs={6} className={classes.playIcon}>
+              <p>Quality sounds</p>
+              <div className={classes.group}>
+                <Image src="/play.png" height={70} width={70} />
+                <Button text="64KBPS" />
+              </div>
+            </Grid>
+            <Grid item xs={6} className={classes.playIcon}>
+              <p>Playlist song</p>
+              <div className={classes.group}>
+              <Image src="/play.png" height={70} width={70} />
+              <Button text="Download" />
+              </div>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Paper>
