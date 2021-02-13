@@ -5,16 +5,14 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
-  root: {
-    width: 400
-  },
-  slider: bg => {
-    backgroundColor: bg;
+  root: (width,color) => {
+    width: width;
+    color: color;
   }
 });
 
-export default function VolumeSlider({ bg }) {
-  const classes = useStyles({ bg });
+export default function VolumeSlider({ color, width }) {
+  const classes = useStyles({ color, width });
   const [value, setValue] = React.useState<number>(30);
 
   const handleChange = (event: any, newValue: number | number[]) => {

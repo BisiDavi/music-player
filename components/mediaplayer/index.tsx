@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '18px',
       color: 'white',
       fontFamily: 'Poppins',
-      padding: theme.spacing(2),
+      padding: theme.spacing(3),
       height: '385px'
     },
     control: {
@@ -55,8 +55,8 @@ const useStyles = makeStyles((theme: Theme) =>
       fontStyle: 'normal',
       marginLeft: '10px',
       '& h3': {
-        fontSize: '36px',
-        lineHeight: '54px',
+        fontSize: '30px',
+        lineHeight: '50px',
         margin: '0px'
       },
       '& p': {
@@ -90,7 +90,7 @@ const Mediaplayer = (): JSX.Element => {
             play={false}
           />
         </Grid>
-        <Grid xs={8} className={classes.text} item>
+        <Grid xs={7} className={classes.text} item>
           <p>Travel and adventure</p>
           <h3>Radio station</h3>
         </Grid>
@@ -98,7 +98,7 @@ const Mediaplayer = (): JSX.Element => {
           <Image src="/wave.png" height={200} width={500} />
         </Grid>
         <Grid xs={12} item>
-          <VolumeSlider bg="linear-gradient(89.98deg, rgba(250, 92, 3, 0.69) -37.51%, #E12A2A 92.61%);" />
+          <VolumeSlider color="linear-gradient(89.98deg, rgba(250, 92, 3, 0.69) -37.51%, #E12A2A 92.61%);" width="350px" />
           <div className={classes.grp}>
             <p>07:00</p>
             <p>20:32</p>

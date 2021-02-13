@@ -11,14 +11,14 @@ const useStyles = makeStyles({
     borderRadius: '7px',
     width: '70px',
     color: 'white',
-    border:'none',
+    border: 'none',
     height: '24px',
     '& img': {
       margin: '2px 5px'
     }
   },
-  icon:{
-    marginRight:'10px'
+  icon: {
+    marginRight: '10px'
   }
 });
 
@@ -30,7 +30,13 @@ const IconButton = ({ text }: IButtonProps): JSX.Element => {
   const classes = useStyles();
   return (
     <button className={classes.iconbtn}>
-      <Image src="/profile.png" className={classes.icon} width={100} height={100} alt="profile" />
+      <Image
+        src="/profile.png"
+        className={classes.icon}
+        width={40}
+        height={40}
+        alt="profile"
+      />
       {text}
     </button>
   );

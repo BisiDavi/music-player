@@ -19,14 +19,13 @@ const useStyles = makeStyles({
     display: 'flex',
     color: 'white',
     justifyContent: 'flex-start',
-    flexDirection:'column', 
-    '& p':{
+    flexDirection: 'column',
+    '& p': {
       color: 'white'
     }
-
   },
-  group:{
-    display:'flex'
+  group: {
+    display: 'flex'
   }
 });
 
@@ -37,23 +36,22 @@ const Volumemixer = () => {
       <Grid container>
         <Grid item xs={12} className={classes.volume}>
           <p>Volume mixer</p>
-          <VolumeSlider />
+          <VolumeSlider color="white" width="360px" />
         </Grid>
 
         <Grid item>
           <Grid container>
-            <Grid item xs={6} className={classes.playIcon}>
+            <Grid item xs={6} className={classes.sound}>
               <p>Quality sounds</p>
               <div className={classes.group}>
-                <Image src="/play.png" height={70} width={70} />
+                <Image src="/play.png" height={30} width={30} />
                 <Button text="64KBPS" />
               </div>
             </Grid>
             <Grid item xs={6} className={classes.playIcon}>
               <p>Playlist song</p>
               <div className={classes.group}>
-              <Image src="/play.png" height={70} width={70} />
-              <Button text="Download" />
+                <Button text="Download" />
               </div>
             </Grid>
           </Grid>

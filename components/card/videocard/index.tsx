@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     left: '40px',
     display: 'flex',
     justifyContent: 'space-between',
-    width: '130px'
+    width: '150px'
   }
 });
 

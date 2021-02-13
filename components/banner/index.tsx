@@ -6,7 +6,7 @@ import { Imagecard } from '../card';
 const useStyles = makeStyles({
   root: {
     width: '100%',
-    padding:'0px 10px'
+    padding: '0px 10px'
   },
   favourite: {
     padding: '15px',
@@ -14,13 +14,15 @@ const useStyles = makeStyles({
     height: '40px',
     border: '1px solid #FF8A00',
     boxSizing: 'border-box',
-    borderRadius: '8px'
+    borderRadius: '8px',
+    display: 'flex',
+    alignItems: 'center'
   },
   text: {
     fontFamily: 'Poppins',
     fontStyle: 'normal',
     color: 'white',
-    marginLeft:'10px',
+    marginLeft: '10px',
     '& h5': {
       fontWeight: '500',
       fontSize: '18px',

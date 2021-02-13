@@ -6,10 +6,11 @@ const useStyles = makeStyles({
   root: {
     height: '145px',
     width: '100%',
-    padding: '15px 40px 25px 40px',
+    padding: '15px 20px 10px 20px',
     background: ' #292929',
     borderRadius: '15px',
     display: 'flex',
+    alignItems: 'center',
     '& h3': {
       color: 'white',
       fontFamily: 'Poppins',
@@ -21,10 +22,11 @@ const useStyles = makeStyles({
   },
   imgGrp: {
     marginLeft: '20px',
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   },
   historyImg: {
-    margin: '10px'
+    margin: '6px'
   }
 });
 const Songhistory = () => {
@@ -42,7 +44,7 @@ const Songhistory = () => {
       <span className={classes.imgGrp}>
         {images.map(img => (
           <div key={img.id} className={classes.historyImg}>
-            <Imagecard imgsrc={img.image} height={70} width={70} play />
+            <Imagecard imgsrc={img.image} height={120} width={160} play />
           </div>
         ))}
       </span>
