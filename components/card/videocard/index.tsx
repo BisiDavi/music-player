@@ -7,10 +7,15 @@ const useStyles = makeStyles({
   paper: {
     borderRadius: '10px',
     position: 'relative',
-    background: 'none'
+    background: 'none',
+    '& img':{
+      margin:'auto',
+      display: 'flex'
+    }
   },
   playIcon: {
     left: '45%',
+    top: '40%',
     position: 'absolute'
   },
   btnGrp: {
@@ -27,7 +32,7 @@ const Videocard = ({ video }) => {
   const classes = useStyles();
   return (
     <div className={classes.paper}>
-      <Image src={video} width={900} height={400} />
+      <Image src={video} width={900} height={350} />
       <div className={classes.btnGrp}>
         <Button text="Live" />
         <IconButton text="8/10" />

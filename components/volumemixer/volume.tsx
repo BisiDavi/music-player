@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Slider } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function ContinuousSlider() {
+export default function Slider() {
   const classes = useStyles();
   const [value, setValue] = React.useState<number>(30);
 

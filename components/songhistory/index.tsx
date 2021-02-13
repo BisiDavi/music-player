@@ -8,10 +8,14 @@ const useStyles = makeStyles({
     width: '100%',
     padding: '15px 40px 25px 40px',
     background: ' #292929',
-    borderRadius: '15px'
+    borderRadius: '15px',
+    display:'flex'
+  },
+  historyImg:{
+    margin: 10px 20px
   }
 });
-const SongHistory = () => {
+const Songhistory = () => {
   const classes = useStyles();
   const images = [
     { id: 1, image: '/imageplaceholder8.png' },
@@ -22,10 +26,18 @@ const SongHistory = () => {
     <Grid className={classes.root}>
       <h3>
         Song <br /> History
-      </h3>
-      {images.map(img => <Imagecard src={img} />}
+      </h3> 
+    <span>
+      {images.map(img => (
+        <div id={img.id} className={classes.historyImg}>
+          <Imagecard 
+            imgsrc={img.image}  
+          />
+        </div>
+      ))}
+      </span>
     </Grid>
   );
 };
 
-export default SongHistory;
+export default Songhistory;
