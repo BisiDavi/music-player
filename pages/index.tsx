@@ -6,6 +6,20 @@ import { Banner, Volumemixer, Mediaplayer, Songhistory } from '../imports';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    '@global': {
+      '& playlist': {
+        '*::-webkit-scrollbar': {
+          width: '0.4em'
+        },
+        '*::-webkit-scrollbar-track': {
+          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
+        },
+        '*::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(0,0,0,.1)',
+          outline: '1px solid slategrey'
+        }
+      }
+    },
     root: {
       flexGrow: 1,
       backgroundColor: 'black',
@@ -14,7 +28,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     media: {
       height: '400px',
-      padding:'0px 7px'
+      padding: '0px 7px'
+    },
+    divider: {
+      width: '2px',
+      height: '100%',
+      background: '#2D2D2D',
+      margin: '0px auto'
     },
     rightColumn: {
       display: 'flex',
@@ -50,15 +70,15 @@ const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Poppins',
         marginLeft: '10px'
       },
-      '& ::-webkit-scrollbar': {
+      '*::-webkit-scrollbar': {
         width: '6px',
         height: '126px',
         borderRadius: '21px'
       },
-      '& ::-webkit-scrollbar-thumb': {
+      '*::-webkit-scrollbar-thumb': {
         backgroundColor: '#FF8A00'
       },
-      '& ::-webkit-scrollbar-track': {
+      '*::-webkit-scrollbar-track': {
         backgroundColor: '#292929',
         borderRadius: '21px',
         width: '6px'
@@ -109,7 +129,10 @@ const LandingPage = (): JSX.Element => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={1}>
+          <div className={classes.divider}></div>
+        </Grid>
+        <Grid item xs={3}>
           <Paper className={classes.playlist}>
             <h3>Other Playlist</h3>
             {playlists.map(playlist => (

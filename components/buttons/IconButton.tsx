@@ -33,8 +33,8 @@ const IconButton = ({ text }: IButtonProps): JSX.Element => {
       <Image
         src="/profile.png"
         className={classes.icon}
-        width={40}
-        height={40}
+        width={15}
+        height={15}
         alt="profile"
       />
       {text}

@@ -5,9 +5,12 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
-  root: (width,color) => {
+  root: (width) => {
     width: width;
+  },
+  volumeSLider: (color) =>{
     color: color;
+    
   }
 });
 
@@ -28,7 +31,7 @@ export default function VolumeSlider({ color, width }) {
         <Grid item xs>
           <Slider
             value={value}
-            className={classes.slider}
+            className={classes.volumeSLider}
             onChange={handleChange}
             aria-labelledby="continuous-slider"
           />

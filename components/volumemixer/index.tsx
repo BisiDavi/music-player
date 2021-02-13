@@ -9,7 +9,15 @@ const useStyles = makeStyles({
     width: '100%',
     height: '208px',
     background: '#FF8A00',
-    borderRadius: '18px'
+    borderRadius: '18px',
+    '& p': {
+      color: 'white',
+      fontFamily: ' Poppins',
+      fontStyle: 'normal',
+      fontWeight: '500',
+      fontSize: '14px',
+      lineHeight: '21px',
+    }
   },
   playIcon: {
     left: '45%',
@@ -20,12 +28,15 @@ const useStyles = makeStyles({
     color: 'white',
     justifyContent: 'flex-start',
     flexDirection: 'column',
-    '& p': {
-      color: 'white'
-    }
   },
   group: {
-    display: 'flex'
+    display: 'flex',
+    width: '150px',
+    justifyContent:'space-between'
+  },
+  sound:{
+  display:'flex',
+  flexDirection:'column'
   }
 });
 
@@ -36,7 +47,7 @@ const Volumemixer = () => {
       <Grid container>
         <Grid item xs={12} className={classes.volume}>
           <p>Volume mixer</p>
-          <VolumeSlider color="white" width="360px" />
+          <VolumeSlider color="white !important" width="360px" />
         </Grid>
 
         <Grid item>
