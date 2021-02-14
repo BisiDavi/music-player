@@ -7,17 +7,19 @@ import { Banner, Volumemixer, Mediaplayer, Songhistory } from '../imports';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     '@global': {
-      '& playlist': {
-        '*::-webkit-scrollbar': {
-          width: '0.4em'
-        },
-        '*::-webkit-scrollbar-track': {
-          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
-        },
-        '*::-webkit-scrollbar-thumb': {
-          backgroundColor: 'rgba(0,0,0,.1)',
-          outline: '1px solid slategrey'
-        }
+      '*::-webkit-scrollbar': {
+        width: '6px',
+        height: '126px',
+        borderRadius: '21px'
+      },
+      '*::-webkit-scrollbar-thumb': {
+        backgroundColor: '#FF8A00',
+        borderRadius: '21px'
+      },
+      '*::-webkit-scrollbar-track': {
+        backgroundColor: '#292929',
+        borderRadius: '21px',
+        width: '6px'
       }
     },
     root: {
@@ -58,7 +60,6 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       backgroundColor: 'black',
       margin: '10px',
-      padding: '0px',
       '& p': {
         marginBottom: '4px'
       },
@@ -69,19 +70,6 @@ const useStyles = makeStyles((theme: Theme) =>
         color: 'white',
         fontFamily: 'Poppins',
         marginLeft: '10px'
-      },
-      '*::-webkit-scrollbar': {
-        width: '6px',
-        height: '126px',
-        borderRadius: '21px'
-      },
-      '*::-webkit-scrollbar-thumb': {
-        backgroundColor: '#FF8A00'
-      },
-      '*::-webkit-scrollbar-track': {
-        backgroundColor: '#292929',
-        borderRadius: '21px',
-        width: '6px'
       }
     }
   })

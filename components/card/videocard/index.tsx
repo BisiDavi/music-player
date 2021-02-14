@@ -34,7 +34,7 @@ const Videocard = ({ video }) => {
     <div className={classes.paper}>
       <Image src={video} width={900} height={350} />
       <div className={classes.btnGrp}>
-        <Button text="Live" />
+        <Button  text="Live" />
         <IconButton text="8/10" />
       </div>
       <div className={classes.playIcon}>
