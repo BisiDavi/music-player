@@ -6,15 +6,15 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
   root: {
-    width:
-    '360px'},
-  volumeSlider:{
-    color:'white !important'
-  };
+    width: '360px'
+  },
+  volumeSlider: {
+    color: 'white !important'
+  }
 });
 
-export default function VolumeSlider({ sColor, width }) {
-  const classes = useStyles({ sColor, width });
+export default function VolumeSlider() {
+  const classes = useStyles();
   const [value, setValue] = React.useState<number>(30);
 
   const handleChange = (event: any, newValue: number | number[]) => {
