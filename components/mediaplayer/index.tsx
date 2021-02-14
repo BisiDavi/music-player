@@ -98,7 +98,7 @@ const Mediaplayer = (): JSX.Element => {
           <Image src="/wave.png" height={200} width={500} />
         </Grid>
         <Grid xs={12} item>
-          <VolumeSlider color="linear-gradient(89.98deg, rgba(250, 92, 3, 0.69) -37.51%, #E12A2A 92.61%);" width="350px" />
+          <VolumeSlider/>
           <div className={classes.grp}>
             <p>07:00</p>
             <p>20:32</p>

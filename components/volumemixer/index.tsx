@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
   container: {
     display: 'flex',
-    width:'350px',
+    width: '350px',
     justifyContent: 'space-around'
   },
   playlist: {
@@ -61,11 +61,11 @@ const Volumemixer = () => {
       <Grid container>
         <Grid item xs={12} className={classes.volume}>
           <p>Volume mixer</p>
-          <VolumeSlider color="white !important" width="360px" />
+          <VolumeSlider />
         </Grid>
 
         <Grid item>
-          <Grid container className={classes.container} >
+          <Grid container className={classes.container}>
             <Grid item xs={6} className={classes.sound}>
               <p>Quality sounds</p>
               <div className={classes.group}>

@@ -5,17 +5,16 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
-  root: (width) => {
-    width: width;
-  },
-  volumeSLider: (color) =>{
-    color: color;
-    
-  }
+  root: {
+    width:
+    '360px'},
+  volumeSlider:{
+    color:'white !important'
+  };
 });
 
-export default function VolumeSlider({ color, width }) {
-  const classes = useStyles({ color, width });
+export default function VolumeSlider({ sColor, width }) {
+  const classes = useStyles({ sColor, width });
   const [value, setValue] = React.useState<number>(30);
 
   const handleChange = (event: any, newValue: number | number[]) => {
@@ -31,7 +30,7 @@ export default function VolumeSlider({ color, width }) {
         <Grid item xs>
           <Slider
             value={value}
-            className={classes.volumeSLider}
+            className={classes.volumeSlider}
             onChange={handleChange}
             aria-labelledby="continuous-slider"
           />
